@@ -17,3 +17,13 @@ while True:
 
 while True:
     color = input('\nWhat is yor favorite color? ')
+    color_confirmation = color + ' '
+
+    confirmation_color = input('\nDo you realy like the color? (YES/NO) ' + color_confirmation).strip().lower()
+
+    if confirmation_color == 'yes':
+        print('\nThank you')
+        break
+
+    else:
+        print('\nRestarting\n')
