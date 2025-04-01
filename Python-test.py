@@ -1,3 +1,5 @@
+from datetime import datetime
+
 while True:
     name = input('What is your name? ')
     fst_name = name + ' '
@@ -27,3 +29,8 @@ while True:
 
     else:
         print('\nRestarting')
+
+while True:
+    year = input('\nWhen were you born? ')
+    age_by_year = datetime.now().year - int(year)
+    print('You are going to be ' + age_by_year)
