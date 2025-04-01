@@ -26,4 +26,4 @@ while True:
         break
 
     else:
-        print('\nRestarting\n')
+        print('\nRestarting')
