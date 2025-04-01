@@ -13,7 +13,5 @@ month = input(f'Are you going to be {age}? (yes/no) ').strip().lower()
 
 if month == "yes":
     print(f'{name.title()} {last.title()} will be {age} years old.')
-if month == "yep":
-    print(f'{name.title()} {last.title()} will be {age} years old.')
 else:
     print(f'Oh, so you are still {age - 1} years old!!')
