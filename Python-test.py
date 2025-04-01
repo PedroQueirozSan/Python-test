@@ -1,17 +1,19 @@
-name = input('What is your first name? ')
-print('ok ' + name.title())
+while True:
+    name = input('What is your name? ')
+    fst_name = name + ' '
 
-last = input('What is your last name? ')
-color = input(f'{name.title()} {last.title()} what is your favorite color? ')
+    scnd_name = input('\nWhat is your last name? ')
 
-print(f'{name.title()} likes ' + color)
+    full_name = fst_name.upper() + scnd_name.upper()
+    print('\n' + full_name)
+    confirmation = input('Is your name correct? (YES/NO) ').strip().lower()
 
-born = input('When were you born? ')
-age = 2025 - int(born)
+    if confirmation == 'yes':
+        print('\nThank you!')
+        break
 
-month = input(f'Are you going to be {age}? (yes/no) ').strip().lower()
+    else:
+        print('\nRestarting\n')
 
-if month == "yes":
-    print(f'{name.title()} {last.title()} will be {age} years old.')
-else:
-    print(f'Oh, so you are still {age - 1} years old!!')
+while True:
+    color = input('\nWhat is yor favorite color? ')
