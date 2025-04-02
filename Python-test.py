@@ -33,11 +33,13 @@ while True:
     year = input('\nWhen were you born? ')
     age_by_year = datetime.now().year - int(year)
 
-    confirmation_age = input(f'\nYou are going to be {str(age_by_year)} this year? (YES/NO) ').strip().lower()
+    confirmation_age = input(f'\nAre you {str(age_by_year)}? (YES/NO) ').strip().lower()
 
     if confirmation_age == 'yes':
         print('\nThank you!')
         break
 
     else:
-        print('\nRestarting')
+        neg_age_by_year = age_by_year - 1
+        print(f'\nYou are {neg_age_by_year} Thank you!')
+        break
