@@ -19,7 +19,7 @@ while True:
     color = input('\nWhat is yor favorite color? ')
     color_confirmation = color + ' '
 
-    confirmation_color = input(f'\nDo you realy like the color? {color_confirmation}? (YES/NO) ').strip().lower()
+    confirmation_color = input(f'\nDo you realy like the color {color_confirmation}? (YES/NO) ').strip().lower()
 
     if confirmation_color == 'yes':
         print('\nThank you!')
