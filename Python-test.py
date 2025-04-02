@@ -1,5 +1,3 @@
-from datetime import datetime
-
 while True:
     name = input('What is your name? ')
     fst_name = name + ' '
@@ -21,16 +19,25 @@ while True:
     color = input('\nWhat is yor favorite color? ')
     color_confirmation = color + ' '
 
-    confirmation_color = input('\nDo you realy like the color? (YES/NO) ' + color_confirmation).strip().lower()
+    confirmation_color = input(f'\nDo you realy like the color? {color_confirmation}? (YES/NO) ').strip().lower()
 
     if confirmation_color == 'yes':
-        print('\nThank you')
+        print('\nThank you!')
         break
 
     else:
         print('\nRestarting')
 
+from datetime import datetime
 while True:
     year = input('\nWhen were you born? ')
     age_by_year = datetime.now().year - int(year)
-    print('You are going to be ' + age_by_year)
+
+    confirmation_age = input(f'\nYou are going to be {str(age_by_year)} this year? (YES/NO) ').strip().lower()
+
+    if confirmation_age == 'yes':
+        print('\nThank you!')
+        break
+
+    else:
+        print('\nRestarting')
