@@ -1,3 +1,4 @@
+from datetime import datetime
 while True:
     name = input('What is your name? ')
     fst_name = name + ' '
@@ -10,12 +11,12 @@ while True:
 
     if confirmation == 'yes':
         print('\nThank you!')
-        break
+
 
     else:
-        print('\nRestarting\n')
+        print('\nRestarting...\n')
+        continue
 
-while True:
     color = input('\nWhat is yor favorite color? ')
     color_confirmation = color + ' '
 
@@ -23,13 +24,11 @@ while True:
 
     if confirmation_color == 'yes':
         print('\nThank you!')
-        break
 
     else:
-        print('\nRestarting')
+        print('\nRestarting...')
+        continue
 
-from datetime import datetime
-while True:
     year = input('\nWhen were you born? ')
     age_by_year = datetime.now().year - int(year)
 
@@ -37,9 +36,22 @@ while True:
 
     if confirmation_age == 'yes':
         print('\nThank you!')
-        break
+
 
     else:
         neg_age_by_year = age_by_year - 1
-        print(f'\nYou are {neg_age_by_year} Thank you!')
+        print('Thank you!')
+
+    cat = input('\nDo you have a cat? (YES/NO) ').strip().lower()
+
+    if cat == 'yes':
+        cat_breed = input('\nWhat kind of cat? ')
+        other_cat = input('\nWould you like to have another cat? ')
+        number_cats = input('\nHow many? ')
+        why_cats = input('\n why do you love cats? ')
+        print('\nThank you!')
+
+    else:
+        print('\n:(')
+        print('thanks.')
         break
